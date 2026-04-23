@@ -15,13 +15,13 @@
 
 Sea la matriz
 
+
 $$
-
-A = 
-    \begin{pmatrix} 5 & -2 
-    \\ -2 & 8 
-    \end{pmatrix}
-
+A=
+\begin{pmatrix}
+5 & -2 \\
+-2 & 8
+\end{pmatrix}
 $$
 
 Para encontrar sus eigenvalores, calculamos el polinomio característico resolviendo:
