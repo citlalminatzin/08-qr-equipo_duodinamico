@@ -4,7 +4,7 @@ from math import sqrt
 from qr import qr
 from gram_schmidt import matmul, matrix_to_str
 
- """ Calculamos primero los eigenvalores exactos de una matriz 2x2
+""" Calculamos primero los eigenvalores exactos de una matriz 2x2
     usando el polinomio característico .-. """
 def eig_characteristic_2x2(A: list[list[float]]) -> list[float]:
    
@@ -77,7 +77,7 @@ def eigenvals_qr_simple(A: list[list[float]], nit: int = 10) -> list[float]:
 #EJERCICIO 3, ahora si xD 
 
 
- """verifica si todos los elementos fuera de la diagonal
+"""verifica si todos los elementos fuera de la diagonal
     tienen valor absoluto menor que epsilon >_<  """
 
 def fuera_diagonal_menor_que_epsilon(A: list[list[float]], epsilon: float) -> bool:
