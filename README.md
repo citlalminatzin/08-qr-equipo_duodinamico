@@ -171,7 +171,7 @@ Al finalizar las iteraciones, se obtuvo una matriz $$A_{10}$$ aproximadamente di
 Si denotamos por $$A_{10}$$ la matriz obtenida después de 10 iteraciones, entonces:
 
 $$
-\text{eigenvalores aproximados} \approx \operatorname{diag}(A_{10})
+\text{eigenvalores aproximados} \approx \ operatorname{diag}(A_{10})
 $$
 
 En nuestro caso, la diagonal de la matriz resultante es aproximadamente:
