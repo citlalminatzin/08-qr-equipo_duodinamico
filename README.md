@@ -3,12 +3,30 @@
 
 ¡Adentrémonos en el increíble mundo del álgebra lineal numérica! OwO
 
+¡Va :( !
+
+
 ## Integrantes
 
 - Garcia Chalche Julio Cesar 
 
 ## Uso e instalación
 
+Requisitos: Python 3 
+
+Ejecucion del programa:  desde main.py
+
+Estructura: 
+
+├── main.py                *# Archivo principal para ejecutar la práctica*
+
+├── eigenvalues.py         *# Métodos para calcular eigenvalores*
+
+├── qr.py                  *# Implementación de la factorización QR*
+
+├── gram_schmidt.py        *# Funciones auxiliares de álgebra lineal*
+
+└── README.md              *# Documentación del proyecto*
 
 
 ## Ejercicio 1. Cálculos con el polinomio característico
