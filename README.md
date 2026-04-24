@@ -200,3 +200,129 @@ $$
 
 ya que, después de varias iteraciones, los elementos de la diagonal de $$A_k$$ convergen a los eigenvalores de la matriz original.
 
+## Ejercicio 3. El método QR
+
+En este ejercicio se mejoró el método QR simple agregando una condición de paro basada en una tolerancia.
+
+En el ejercicio anterior, el método QR se ejecutaba un número fijo de iteraciones; sin embargo, ahora se busca controlar la precisión del resultado. Pora ello, el algoritmo se detiene cuando todos los valores fuera de la diagonal de la matriz son menores que una tolerancia dada.
+
+La matriz utilizada nuevamente fue:
+
+$$
+A =
+\begin{pmatrix}
+5 & -2 \\
+-2 & 8
+\end{pmatrix}
+$$
+
+El método QR parte de:
+
+$$
+A_0 = A
+$$
+
+En cada iteración se realiza la factorización QR:
+
+$$
+A_k = Q_k R_k
+$$
+
+Después se construye la siguiente matriz:
+
+$$
+A_{k+1} = R_k Q_k
+$$
+
+Como la matriz original es simétrica, el método QR hace que las matrices generadas se aproximen a una matriz diagonal. Los elementos de esa diagonal corresponden a una aproximación de los eigenvalores de la matriz original.
+
+Para controlar la precisión, se revisan los elementos fuera de la diagonal. Es decir, se busca que:
+
+$$
+|a_{ij}| < \varepsilon
+\quad \text{para todo } i \neq j
+$$
+
+En esta práctica se usó la tolerancia:
+
+$$
+\varepsilon = 1 \times 10^{-10}
+$$
+
+y un número máximo de iteraciones:
+
+$$
+N = 1000
+$$
+
+Por lo tanto, el algoritmo se detiene si se cumple la condición de tolerancia o si se alcanza el número máximo de iteraciones.
+
+El procedimiento implementado fue:
+
+$$
+A_0 = A
+$$
+
+$$
+A_k = Q_k R_k
+$$
+
+$$
+A_{k+1} = R_k Q_k
+$$
+
+y en cada iteración se verifica que los elementos fuera de la diagonal sean menores que la tolerancia:
+
+$$
+|a_{ij}| < 1 \times 10^{-10}
+$$
+
+Al ejecutar el método QR con tolerancia, la matriz resultante se aproxima a una matriz diagonal de la forma:
+
+$$
+A_k \approx
+\begin{pmatrix}
+9 & 0 \\
+0 & 4
+\end{pmatrix}
+$$
+
+Por lo tanto, los valores de la diagonal son una aproximación de los eigenvalores:
+
+$$
+\lambda_1 \approx 9
+\qquad
+\lambda_2 \approx 4
+$$
+
+Estos valores coinciden con los eigenvalores calculados en el ejercicio 1 mediante el polinomio característico:
+
+$$
+\lambda_1 = 4
+\qquad
+\lambda_2 = 9
+$$
+
+### Conclusión
+
+El método QR con tolerancia permite aproximar los eigenvalores de una matriz de manera más controlada que el método QR simple, ya que no depende únicamente de un número fijo de iteraciones.
+
+En este caso, al aplicar el método a la matriz
+
+$$
+A =
+\begin{pmatrix}
+5 & -2 \\
+-2 & 8
+\end{pmatrix}
+$$
+
+se obtuvo una matriz aproximadamente diagonal. Los valores de su diagonal se aproximan a:
+
+$$
+9
+\quad \text{y} \quad
+4
+$$
+
+Por lo tanto, se confirma que el método QR funciona correctamente para aproximar los eigenvalores de una matriz simétrica.
