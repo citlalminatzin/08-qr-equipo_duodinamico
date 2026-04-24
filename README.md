@@ -12,6 +12,8 @@
 
 
 ## Ejercicio 1. Cálculos con el polinomio característico
+    Por medio del método del polinomio característico, calculen los eigenvalores de la
+    siguiente matriz 
 
 Sea la matriz
 
@@ -121,6 +123,9 @@ $$
 
 ## Ejercicio 2. El método QR simple
 
+    En este ejercicio programarán el método QR para calcular los eigenvalores de una matriz
+    real A de tamaño n×n. Comenzaremos suponiendo que la matriz A es simétrica.
+
 En este ejercicio se implementó el **método QR simple** para aproximar los eigenvalores de una matriz real, cuadrada y simétrica.
 
 El método parte de una matriz inicial $$A_0 = A$$ y, en cada iteración, realiza la factorización QR de la matriz actual:
@@ -194,3 +199,4 @@ A =
 $$
 
 ya que, después de varias iteraciones, los elementos de la diagonal de $$A_k$$ convergen a los eigenvalores de la matriz original.
+
