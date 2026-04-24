@@ -4,9 +4,73 @@ import collections
 import numbers
 
 from math import pi
-
 from linear_solver import solve
 
+from eigenvalues import eig_characteristic_2x2 
+from eigenvalues import qr_simple
+
+#EJERCICIO 1 
+def main():
+    A = [[5.0, -2.0],
+         [-2.0, 8.0]]
+
+    eigs = eig_characteristic_2x2(A)
+
+    print("Matriz A:")
+    for row in A:
+        print(row)
+
+    print("\nEigenvalores por polinomio característico:")
+    print(eigs)
+
+
+if __name__ == "__main__":
+    main()
+
+#Ejercicio 2 
+
+def main():
+    A = [
+        [5.0, -2.0],
+        [-2.0, 8.0]
+    ]
+
+    nit = 10
+
+    Ak = qr_simple(A, nit)
+
+    eigenvalores_aproximados = [Ak[i][i] for i in range(len(Ak))]
+
+    print("\nResultado final:")
+    print(f"Matriz A_{nit}:")
+    for row in Ak:
+        print(row)
+
+    print("\nEigenvalores aproximados por el método QR simple:")
+    print(eigenvalores_aproximados)
+
+    print("\nEigenvalores exactos obtenidos en el ejercicio 1:")
+    print([4.0, 9.0])
+
+
+if __name__ == "__main__":
+    main()
+
+
+#EJERCICIO 3 
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 # linspace obtenido de (https://code.activestate.com/recipes/579000/)
 class linspace(collections.abc.Sequence):
     """linspace(start, stop, num) -> linspace object
@@ -51,3 +115,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
